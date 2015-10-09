@@ -1,0 +1,15 @@
+01/10/2015 20:54:19 [TestLogger][  INFO]:- The web address has been entered correctly
+01/10/2015 20:54:19 [TestLogger][  INFO]:- My Account button is about to be clicked
+01/10/2015 20:54:19 [TestLogger][  INFO]:- Account has opened successfully
+01/10/2015 20:54:20 [TestLogger][ ERROR]:- The loginWith method encountered an error: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
+Command duration or timeout: 636 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.0', revision: '0e4837e94b1fad0db93e88cd972ed3e235a22892', time: '2015-07-29 15:58:41'
+System info: host: 'Michaels-iMac', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.4', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 682bfafa-3e35-764d-b53d-10b533141a63
+*** Element info: {Using=id, value=email}
+01/10/2015 20:54:20 [TestLogger][ ERROR]:- The verify method has encountered an error java.lang.AssertionError: The test could not find the name:  Donald Jonathan
+01/10/2015 20:54:21 [TestLogger][  INFO]:- The browser has now closed
+01/10/2015 20:54:21 [TestLogger][  INFO]:- The browser has no value
