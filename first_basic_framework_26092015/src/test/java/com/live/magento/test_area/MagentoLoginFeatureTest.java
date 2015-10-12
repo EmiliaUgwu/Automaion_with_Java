@@ -21,7 +21,7 @@ import com.tngtech.java.junit.dataprovider.UseDataProvider;
 
 
 @RunWith(DataProviderRunner.class)
-public class MagentoTest {
+public class MagentoLoginFeatureTest {
 
 	
 		private WebDriver driver;
