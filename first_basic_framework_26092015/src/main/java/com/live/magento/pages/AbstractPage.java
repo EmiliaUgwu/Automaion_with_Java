@@ -9,12 +9,16 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.live.magento.utilities.Screenshot;
 
 public class AbstractPage {
 	
 		protected static WebDriver driver;
+		protected static WebDriverWait wait = new WebDriverWait(driver, 15);
 		protected static Properties config = new Properties ();
 		protected static FileInputStream fis;
 		protected static Screenshot camera;
@@ -119,10 +123,19 @@ public class AbstractPage {
 //		}
 		
 		public void searchForProduct (String productName) {
+			WebElement element = driver.findElement(By.id("search"));
+			By locator = By.id("search");
 			try{
 				driver.findElement(By.id("search")).sendKeys(productName);
 				logger.info("The product" +productName+  "has been populated successfully");
 				driver .findElement(By.cssSelector(".button.search-button")).click();
+				
+//				wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
+//				wait.until(ExpectedConditions.titleContains("Christmas"));
+//				wait.until(ExpectedConditions.alertIsPresent());
+//				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search")));
+//				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("search")));
+				
 				logger.info("The search button has been clicked");
 			}catch(Throwable t){
 				logger.error("The method searchForProduct has encountered an error", t);
