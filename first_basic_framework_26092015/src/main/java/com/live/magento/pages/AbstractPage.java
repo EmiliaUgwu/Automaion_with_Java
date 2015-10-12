@@ -123,18 +123,18 @@ public class AbstractPage {
 //		}
 		
 		public void searchForProduct (String productName) {
-			WebElement element = driver.findElement(By.id("search"));
-			By locator = By.id("search");
+//			WebElement element = driver.findElement(By.id("search"));
+//			By locator = By.id("search");
 			try{
 				driver.findElement(By.id("search")).sendKeys(productName);
 				logger.info("The product" +productName+  "has been populated successfully");
 				driver .findElement(By.cssSelector(".button.search-button")).click();
 				
-//				wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
+//				wait.until(ExpectedConditions.elementToBeClickable(element));
 //				wait.until(ExpectedConditions.titleContains("Christmas"));
 //				wait.until(ExpectedConditions.alertIsPresent());
-//				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search")));
-//				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("search")));
+//				wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//				wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
 				
 				logger.info("The search button has been clicked");
 			}catch(Throwable t){
