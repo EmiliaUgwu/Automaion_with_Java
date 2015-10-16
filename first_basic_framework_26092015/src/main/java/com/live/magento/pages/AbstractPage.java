@@ -18,7 +18,7 @@ import com.live.magento.utilities.Screenshot;
 public class AbstractPage {
 	
 		protected static WebDriver driver;
-		protected static WebDriverWait wait = new WebDriverWait(driver, 15);
+//		protected static WebDriverWait wait = new WebDriverWait (driver, 15);
 		protected static Properties config = new Properties ();
 		protected static FileInputStream fis;
 		protected static Screenshot camera;

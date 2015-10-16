@@ -9,11 +9,13 @@ public class MyAccountPage extends AbstractPage{
 		super(driver);
 	}
 	
-		public void loginWith () {
+		public void loginWith (String username, String password) {
 			try{
-				driver.findElement(By.id("email")).sendKeys(config.getProperty("username"));
+				driver.findElement(By.id("email")).sendKeys(username);
+	//			driver.findElement(By.id("email")).sendKeys(config.getProperty("username"));
 				logger.info("username has been entered successfully");
-				driver.findElement(By.id("pass")).sendKeys(config.getProperty("password"));
+				driver.findElement(By.id("email")).sendKeys(password);
+	//			driver.findElement(By.id("pass")).sendKeys(config.getProperty("password"));
 				logger.info("password has been entered successfully");
 				driver.findElement(By.id("send2")).click();
 				logger.info("Login button has been clicked successfully");

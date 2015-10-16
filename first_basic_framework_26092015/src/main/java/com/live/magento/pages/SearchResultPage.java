@@ -15,6 +15,7 @@ public class SearchResultPage extends AbstractPage{
 	public void verifyTheProduct(String productName)  {
 		try{
 			boolean result = driver.getPageSource().contains(productName);
+//			wait.until(ExpectedConditions.alertIsPresent());
 			logger.info("The condition has been determined" + result);
 			Assert.assertFalse("The product name does not exist on the application",!result);
 			logger.info("The product has been found on the page");
